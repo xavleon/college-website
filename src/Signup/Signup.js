@@ -30,7 +30,7 @@ const Signup = () => {
       console.log(res);
 
       if (res.status === 201) {
-        alert("Sigup successfully, Now Do Login");
+        alert("Sigup successfully, Do Login");
         navigate("/login");
       } else {
         setError("Internal Server Error");
