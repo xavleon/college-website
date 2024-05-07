@@ -5,6 +5,7 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Couch from "./couch.jpg";
+import studyImage from "./study-image.jpg"
 export default function Content() {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -44,39 +45,38 @@ export default function Content() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-indigo-600">
-                Refresh. Renew. Revitalize.
+                Creating an Academic Sanctuary: The Importance of Cleanliness
+                for Scholarly Success
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Green cleaning for a healthier home.
+                Revitalize Your Study Space.
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas.
+                In the pursuit of academic excellence, the environment in which
+                you study plays a crucial role. A clean and organized study
+                space not only enhances focus and productivity but also
+                contributes to overall well-being. Here are some key
+                considerations for maintaining a clean and healthy environment
+                conducive to studying:
               </p>
             </div>
           </div>
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img className="couch" src={Couch} alt="" />
+          <img className="couch" src={studyImage} alt="" width={"800px"} style={{ borderRadius: "10px"}}/>
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                At Synergy Works Pro, we take pride in providing top-notch
-                professional cleaning services tailored to meet your specific
-                needs. With years of experience in the industry, our dedicated
-                team of cleaning experts is committed to delivering exceptional
-                results, leaving your spaces spotless and refreshed. Whether you
-                need residential cleaning, commercial cleaning, janitorial
-                services, or specialized cleaning solutions, we've got you
-                covered. Our meticulous attention to detail, use of eco-friendly
-                cleaning products, and reliable service make us the go-to choice
-                for clients seeking excellence in cleanliness and hygiene.
-                Experience the synergy of efficiency, reliability, and
-                cleanliness with Synergy Works Pro. Contact us today for a
-                personalized cleaning solution that exceeds your expectations.
+                Creating an Optimal Environment for Academic Excellence. At
+                Synergy Works Pro, we understand the importance of a clean and
+                organized study space for your academic pursuits. That's why we
+                offer professional cleaning services tailored specifically for
+                scholarly environments like yours. Whether you're studying in a
+                dorm, library, or shared academic space, our dedicated team is
+                here to ensure your surroundings are conducive to focused
+                learning and productivity.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
