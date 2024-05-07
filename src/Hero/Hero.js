@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
 const Hero = () => {
-  const [username, setUsername] = useState(localStorage.getItem("username"));
+  const [firstName, setFirstName] = useState(localStorage.getItem("first"));
   return (
     <section class="bg-white dark:bg-gray-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
@@ -28,7 +32,7 @@ const Hero = () => {
           </svg>
         </a>
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-          Welcome {username}!
+          Welcome {capitalizeFirstLetter(firstName)} !
         </h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
           Excellence in Every Detail !

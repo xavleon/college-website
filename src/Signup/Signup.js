@@ -15,10 +15,12 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    console.log(firstName, lastName, email, password);
 
     try {
       let data = {
-        username: firstName + lastName,
+        first: firstName,
+        last: lastName,
         email: email,
         password: password,
       };

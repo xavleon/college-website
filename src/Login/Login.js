@@ -13,6 +13,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log(username, password);
     try {
       const res = await axios.get(
         "https://66346caf9bb0df2359a17e9e.mockapi.io/user"
@@ -21,6 +22,7 @@ const Login = () => {
       res.data.map((user) => {
         if (user.username === username && user.password === password) {
           localStorage.setItem("username", user.username);
+          localStorage.setItem("first", user.first);
           navigate("/");
           return;
         }
