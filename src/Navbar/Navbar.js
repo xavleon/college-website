@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navbar } from "flowbite-react";
 import bottleImage from "./bottle.png";
+import brain from "./brain-logo.png"
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +13,12 @@ const Nav = () => {
       <Navbar fluid rounded>
         <Navbar.Brand href="https://flowbite-react.com">
           <img
-            src={bottleImage}
+            src={brain}
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            SynergyWorks ProClean
+          LearnLink: Student Resources Hub
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
