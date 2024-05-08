@@ -8,7 +8,8 @@ import Hero2 from "../Hero2/Hero2";
 import { useNavigate } from "react-router-dom";
 const Landing = () => {
   const navigate = useNavigate();
-  const username = localStorage.getItem("username");
+  const username = localStorage.getItem("username") || "Buddy!";
+  console.log(username);
 
   useEffect(() => {
     if (!username) {
