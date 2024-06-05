@@ -7,11 +7,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.3;
-  }
   a,
   li {
     text-decoration: none;

@@ -10,7 +10,7 @@ const BlogPage = () => {
     const myBlogs = async () => {
       try {
         const apiUrl =
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mrm.leon93";
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed//@jsomineni";
         const response = await fetch(apiUrl);
         const data = await response.json();
         setUser(data.feed);
@@ -32,12 +32,12 @@ const BlogPage = () => {
       test
       <div className="user">
         <img src={user.image} />
-        <h1>{user.title}</h1>
+        <h1 className="text-4xl">{user.title}</h1>
 
         {blogs.map((blog) => {
           return (
             <div>
-              <h1>{blog.title}</h1>
+              <h1 className="text-4xl">{blog.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: blog.description }}></div>
               <a href={blog.link}>Read More</a>
             </div>
