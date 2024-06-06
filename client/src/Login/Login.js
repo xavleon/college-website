@@ -22,7 +22,7 @@ const Login = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://college-website-68cz.onrender.com/api/users/login",
         data
       );
 

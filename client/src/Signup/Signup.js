@@ -38,7 +38,7 @@ const Signup = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/signup/",
+        "https://college-website-68cz.onrender.com/api/users/signup/",
         data //2 parameters api url and data to be posted
       );
       console.log(res);
