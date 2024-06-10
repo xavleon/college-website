@@ -62,6 +62,26 @@
 
  @keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}
 
+ .video-iframe{
+    width:560px;
+    height:315px;
+ }
+ @media screen and (max-width: 500px) {
+    .video-iframe{
+        width:360px;
+        height:315px;
+     }
+    .video-collection {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .video {
+        width: calc(50% - 20px);
+    }
+}
  @media screen and (max-width: 768px) {
     .video-collection {
         width: 100%;

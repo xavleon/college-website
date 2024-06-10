@@ -45,8 +45,7 @@ const VideoPage = () => {
               <div key={video.id}>
                 <h1>{video.snippet.title}</h1>
                 <iframe
-                  width="560"
-                  height="315"
+                  className="video-iframe"
                   src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`}
                   title={video.snippet.title}
                   frameBorder="0"
