@@ -13,7 +13,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://college-webapp.netlify.app",
+    origin: "*",
     credentials: true,
   })
 );
