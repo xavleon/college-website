@@ -17,10 +17,10 @@ const Nav = () => {
           <img
             src={braintech}
             className="mr-3 h-6 sm:h-9"
-            alt="Flowbite React Logo"
+            alt="Student Resources Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            LearnLink: Student Resources Hub
+            Student Success Center
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
@@ -35,28 +35,34 @@ const Nav = () => {
             Home
           </Navbar.Link>
           <Navbar.Link
-            active={window.location.pathname === "/about"}
-            href="/about"
+            active={window.location.pathname === "/resources"}
+            href="/resources"
           >
-            About
+            Learning Resources
           </Navbar.Link>
           <Navbar.Link
-            active={window.location.pathname === "/services"}
-            href="/services"
+            active={window.location.pathname === "/assignments"}
+            href="/assignments"
           >
-            Services
+            Assignments
           </Navbar.Link>
           <Navbar.Link
-            active={window.location.pathname === "/pricing"}
-            href="/pricing"
+            active={window.location.pathname === "/study-materials"}
+            href="/study-materials"
           >
-            Pricing
+            Study Materials
+          </Navbar.Link>
+          <Navbar.Link
+            active={window.location.pathname === "/calendar"}
+            href="/calendar"
+          >
+            Academic Calendar
           </Navbar.Link>
           <Navbar.Link
             active={window.location.pathname === "/contact"}
             href="contact"
           >
-            Contact
+            Contact Professor
           </Navbar.Link>
 
           {user && (
@@ -80,7 +86,7 @@ const Nav = () => {
               }
               href="login"
             >
-              Login/Signup
+              Student Login
             </Navbar.Link>
           )}
         </Navbar.Collapse>
@@ -92,20 +98,23 @@ const Nav = () => {
       >
         {/* Menu content */}
         <div className="p-5">
-          <a href="#" className="block mt-4">
+          <a href="/" className="block mt-4">
             Home
           </a>
-          <a href="#" className="block mt-4">
-            About
+          <a href="/resources" className="block mt-4">
+            Learning Resources
           </a>
-          <a href="#" className="block mt-4">
-            Services
+          <a href="/assignments" className="block mt-4">
+            Assignments
           </a>
-          <a href="#" className="block mt-4">
-            Pricing
+          <a href="/study-materials" className="block mt-4">
+            Study Materials
           </a>
-          <a href="#" className="block mt-4">
-            Contact
+          <a href="/calendar" className="block mt-4">
+            Academic Calendar
+          </a>
+          <a href="/contact" className="block mt-4">
+            Contact Professor
           </a>
         </div>
       </div>

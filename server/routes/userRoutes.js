@@ -15,7 +15,6 @@ const router = express.Router();
 dotenv.config();
 
 const User = require("../models/userModel");
-const { log } = require("console");
 
 const protectRoute = async (req, res, next) => {
   try {

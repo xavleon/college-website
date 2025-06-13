@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/20/solid";
 import Couch from "./couch.jpg";
 import studyImage from "./study-image.jpg";
+
 export default function Content() {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -45,20 +46,88 @@ export default function Content() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-indigo-600">
-                Creating an Academic Sanctuary: The Importance of Cleanliness
-                for Scholarly Success
+                A Message from Professor Javier Leon, Department of Science and
+                Technology
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Revitalize Your Study Space.
+                Create Your Ideal Study Environment
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                In the pursuit of academic excellence, the environment in which
-                you study plays a crucial role. A clean and organized study
-                space not only enhances focus and productivity but also
-                contributes to overall well-being. Here are some key
-                considerations for maintaining a clean and healthy environment
-                conducive to studying:
+                As your professor, I want you to succeed not just in my class,
+                but in all your academic pursuits. One of the best ways to boost
+                your focus and productivity is by creating a study space that
+                works for you. Here are my top tips for making your study area a
+                place where you can excel:
               </p>
+              <ul className="mt-8 space-y-6">
+                <li className="flex gap-x-3">
+                  <span role="img" aria-label="books" className="text-2xl">
+                    📚
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Keep it Organized:
+                    </strong>{" "}
+                    A tidy desk helps clear your mind and reduces distractions.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span role="img" aria-label="lightbulb" className="text-2xl">
+                    💡
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Good Lighting:
+                    </strong>{" "}
+                    Make sure your space is well-lit to reduce eye strain and
+                    keep you alert.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span role="img" aria-label="clock" className="text-2xl">
+                    🕒
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Set a Routine:
+                    </strong>{" "}
+                    Try to study at the same time each day to build strong
+                    habits.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span role="img" aria-label="headphones" className="text-2xl">
+                    🎧
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Minimize Distractions:
+                    </strong>{" "}
+                    Use headphones or background music if it helps you
+                    concentrate.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <span role="img" aria-label="meditation" className="text-2xl">
+                    🧘
+                  </span>
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Take Breaks:
+                    </strong>{" "}
+                    Short breaks can help you recharge and retain information
+                    better.
+                  </span>
+                </li>
+              </ul>
+              <div className="mt-8">
+                <p className="text-lg font-medium text-indigo-700">
+                  What does your study space look like? <br />
+                  <span className="text-gray-700">
+                    Share a photo or your best tip in our student forum!
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -66,88 +135,10 @@ export default function Content() {
           <img
             className="couch"
             src={studyImage}
-            alt=""
+            alt="Student studying at a clean, organized desk"
             width={"800px"}
             style={{ borderRadius: "10px" }}
           />
-        </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-                Creating an Optimal Environment for Academic Excellence. At
-                Synergy Works Pro, we understand the importance of a clean and
-                organized study space for your academic pursuits. That's why we
-                offer professional cleaning services tailored specifically for
-                scholarly environments like yours. Whether you're studying in a
-                dorm, library, or shared academic space, our dedicated team is
-                here to ensure your surroundings are conducive to focused
-                learning and productivity.
-              </p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <li className="flex gap-x-3">
-                  <CloudArrowUpIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Strive for excellence in every cleaning task
-                    </strong>{" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <LockClosedIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Maintain open communication for any special requests or
-                      concerns
-                    </strong>{" "}
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui lorem cupidatat commodo.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <ServerIcon
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Provide personalized cleaning plans to suit your specific
-                      needs
-                    </strong>{" "}
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
-                  </span>
-                </li>
-              </ul>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
-              </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                Use high-quality cleaning products and equipment
-              </h2>
-              <p className="mt-6">
-                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
-                consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod
-                vitae interdum mauris enim, consequat vulputate nibh. Maecenas
-                pellentesque id sed tellus mauris, ultrices mauris. Tincidunt
-                enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                turpis ipsum eu a sed convallis diam.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

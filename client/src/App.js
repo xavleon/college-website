@@ -17,6 +17,9 @@ import Pricing from "./Pages/PricingPage/Pricing";
 import Contact from "./Pages/ContactPage/Contact";
 import VideoPage from "./Pages/VideoCollection/VideoPage";
 import BlogPage from "./Pages/BlogPage/BlogPage";
+import ToggleSwitch from "./ToggleSwitch/ToggleSwitch";
+import Assignments from "./Pages/AssignmentsPage/Assignments";
+
 function App() {
   return (
     <div className="App">
@@ -33,6 +36,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/video-page" element={<VideoPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/assignments" element={<Assignments />} />
           </Routes>
         </BrowserRouter>
       </React.StrictMode>

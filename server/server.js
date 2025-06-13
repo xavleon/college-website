@@ -6,8 +6,11 @@ const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
 const userRoutes = require("./routes/userRoutes");
+const messageRoutes = require("./routes/messageRoutes");
 
 const app = express();
+
+//r6DM4xW17c6RfcjR
 
 app.use(cookieParser());
 
@@ -33,6 +36,7 @@ mongoose
   });
 
 app.use("/api/users", userRoutes);
+app.use("/api/messages", messageRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
