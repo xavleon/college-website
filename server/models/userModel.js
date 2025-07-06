@@ -30,6 +30,25 @@ const userSchema = new mongoose.Schema({
     enum: ["student", "professor", "admin"],
     default: "student",
   },
+  professorRequest: {
+    status: {
+      type: String,
+      enum: ["none", "pending", "approved", "rejected"],
+      default: "none",
+    },
+    requestDate: Date,
+    department: String,
+    credentials: String,
+    approvedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    approvalDate: Date,
+  },
+  inviteToken: {
+    type: String,
+    sparse: true,
+  },
   studentId: {
     type: String,
     unique: true,
@@ -37,15 +56,13 @@ const userSchema = new mongoose.Schema({
   },
   courseSection: {
     type: String,
-    required: function () {
-      return this.role === "student";
-    },
+    default: "N/A",
   },
   notifications: [
     {
       type: {
         type: String,
-        enum: ["assignment", "message", "announcement"],
+        enum: ["assignment", "message", "announcement", "role_request"],
         required: true,
       },
       title: String,

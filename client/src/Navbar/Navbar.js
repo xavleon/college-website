@@ -9,6 +9,7 @@ const Nav = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const user = JSON.parse(localStorage.getItem("user"));
+  const isProfessor = user?.role === "professor";
 
   return (
     <div>
@@ -46,6 +47,14 @@ const Nav = () => {
           >
             Assignments
           </Navbar.Link>
+          {user && (
+            <Navbar.Link
+              active={window.location.pathname === "/grades"}
+              href="/grades"
+            >
+              Grades
+            </Navbar.Link>
+          )}
           <Navbar.Link
             active={window.location.pathname === "/study-materials"}
             href="/study-materials"
@@ -107,6 +116,11 @@ const Nav = () => {
           <a href="/assignments" className="block mt-4">
             Assignments
           </a>
+          {user && (
+            <a href="/grades" className="block mt-4">
+              Grades
+            </a>
+          )}
           <a href="/study-materials" className="block mt-4">
             Study Materials
           </a>

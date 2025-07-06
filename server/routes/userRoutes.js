@@ -178,10 +178,20 @@ router.post("/signup", async (req, res) => {
 
     await sendEmail(options);
 
-    // 5. send back the user
+    // 5. send back the user without sensitive information
+    const userResponse = {
+      firstName: newUser.firstName,
+      lastName: newUser.lastName,
+      email: newUser.email,
+      role: newUser.role,
+      courseSection: newUser.courseSection,
+      isVerified: newUser.isVerified,
+      createdAt: newUser.createdAt,
+    };
+
     res.status(201).send({
       message: "User created successfully",
-      user: newUser,
+      user: userResponse,
     });
   } catch (err) {
     res.status(400).send({

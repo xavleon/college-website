@@ -7,6 +7,9 @@ const dotenv = require("dotenv");
 
 const userRoutes = require("./routes/userRoutes");
 const messageRoutes = require("./routes/messageRoutes");
+const gradeRoutes = require("./routes/gradeRoutes");
+const professorRequestRoutes = require("./routes/professorRequestRoutes");
+const assignmentRoutes = require("./routes/assignmentRoutes");
 
 const app = express();
 
@@ -36,9 +39,12 @@ mongoose
   });
 
 app.use("/api/users", userRoutes);
-app.use("/api/messages", messageRoutes);
+app.use("/api/contact", messageRoutes);
+app.use("/api/professor-requests", professorRequestRoutes);
+app.use("/api/grades", gradeRoutes);
+app.use("/api/assignments", assignmentRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log("Server is running on port 5000");
+  console.log(`Server is running on port ${PORT}`);
 });

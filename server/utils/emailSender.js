@@ -35,7 +35,6 @@ const emailOptions = {
 // Send email function that takes in the emailOptions object and the email data
 
 const sendEmail = async (options) => {
-  console.log(emailOptions);
   // Create a transporter
   const transporter = nodemailer.createTransport(emailOptions);
 
@@ -49,7 +48,7 @@ const sendEmail = async (options) => {
     html: options.html,
   };
 
-  // Set up the transporter
+  // Send the email
   await transporter.sendMail(emailDataOptions);
 };
 

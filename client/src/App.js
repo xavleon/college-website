@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import Hero from "./Hero/Hero";
 import Nav from "./Navbar/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Footer_1 from "./Footer/Footer";
 import Content from "./Content/Content";
 import Hero2 from "./Hero2/Hero2";
@@ -19,6 +19,25 @@ import VideoPage from "./Pages/VideoCollection/VideoPage";
 import BlogPage from "./Pages/BlogPage/BlogPage";
 import ToggleSwitch from "./ToggleSwitch/ToggleSwitch";
 import Assignments from "./Pages/AssignmentsPage/Assignments";
+import GradeManagement from "./Pages/GradesPage/GradeManagement";
+import ProfessorRequest from "./components/ProfessorRequest/ProfessorRequest";
+import ProfessorRequests from "./components/Admin/ProfessorRequests";
+import Calendar from "./Pages/CalendarPage/Calendar";
+
+// Protected Route component
+const ProtectedRoute = ({ children, allowedRoles }) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
+
+  if (allowedRoles && !allowedRoles.includes(user.role)) {
+    return <Navigate to="/" />;
+  }
+
+  return children;
+};
 
 function App() {
   return (
@@ -37,6 +56,35 @@ function App() {
             <Route path="/video-page" element={<VideoPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/assignments" element={<Assignments />} />
+            <Route path="/calendar" element={<Calendar />} />
+
+            {/* Grade Management Routes */}
+            <Route
+              path="/grades"
+              element={
+                <ProtectedRoute allowedRoles={["student", "professor"]}>
+                  <GradeManagement />
+                </ProtectedRoute>
+              }
+            />
+
+            {/* Professor Request Routes */}
+            <Route
+              path="/request-professor"
+              element={
+                <ProtectedRoute allowedRoles={["student"]}>
+                  <ProfessorRequest />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/manage-requests"
+              element={
+                <ProtectedRoute allowedRoles={["admin"]}>
+                  <ProfessorRequests />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </React.StrictMode>
